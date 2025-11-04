@@ -19,6 +19,7 @@ class Menu:
                 return item
 
     def display_manu(self):
+        str = ""
         i = 1
         for item in self.items:
             print(i)
@@ -27,5 +28,5 @@ class Menu:
 
     def get_total_items(self):
         return len(self.items)
-    
+
 

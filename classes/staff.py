@@ -18,4 +18,6 @@ class Staff:
         return  False
 
     def get_info(self):
+         str1 = "the name is "+self.name+ " the salsry is "+str(self.salary)+" the energy is "+str(self.energy)
+         return str1
 
