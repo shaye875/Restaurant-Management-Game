@@ -19,14 +19,12 @@ class Restaurant:
             if staff1.name == stafe_name:
                 self.staff.remove(staff1)
 
-    def create_order(self,customer,waiter,menu):
-        num = input("enter num of order")
-
+    def create_order(self,customer,waiter,menu,num):
         self.orders.append(waiter.take_order(customer,menu,num))
 
     def complete_order(self,order):
         self.money+=order.get_total()
-        self.orders.remove(order)
+
 
     def pay_salaries(self):
         for staff in self.staff:
@@ -39,7 +37,7 @@ class Restaurant:
         str =  "name is: "+self.name+ " staff is :"
         for staff in self.staff:
             str+=staff.get_info()
-        str += "oders is: "
+        str += " oders is: "
         for order in self.orders:
             str+=order.display_order()
         return str

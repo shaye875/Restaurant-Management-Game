@@ -23,12 +23,13 @@ class Order:
         self.status = status
 
     def display_order(self):
-        str1 = "the number of order is"+ self.order_number+" the customer is "+self.customer.name+" the menuitem is:"
+        str1 = "the number of order is "+ str(self.order_number)+" the customer is "+self.customer.name+" the menuitem is:"
         for item in self.items:
             str1 += item.name
+            str1+=" "
         str1 +="total price:"
         str1+=str(self.total_price)
-        str1+="tje status is "+self.status
+        str1+=" tje status is "+self.status
         return str1
 
     def is_complete(self):
